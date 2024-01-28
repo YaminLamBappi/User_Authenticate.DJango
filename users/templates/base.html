@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{%block title %} Base html {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    {{ time }}
+
+    <form action="">
+        <input type="text" name="query" />
+        <input type="submit" />
+    </form>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+<a href="accounts/logout.html">logout</a>
+
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block title %} Logout {% endblock %}
+
+{% block content %}
+{% if request.user.is_authenticated %}
+
+<div style="margin-top: 35px;" xmlns="http://www.w3.org/1999/html">
+   <h2> Logout </h2>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <div style="margin-top: 15px;">
+        <h3> You are logged in. Do you want to logout ? </h3>
+       <button type="submit"> Logout </button>
+    </div>
+</form>
+{% else %}
+    <div style="margin-top: 15px;">
+    <h3> You are not logged in. Do you want to login
+        <button><a href="http://127.0.0.1:8000/login">Login</a></button></h3>
+
+    </div>
+{% endif %}
+
+</div>
+
+{% endblock %}
