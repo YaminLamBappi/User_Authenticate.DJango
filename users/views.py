@@ -12,11 +12,11 @@ def login_view(request):
         print(user)
         if user is not None:
             login(request, user)
-            return redirect('/signup/')
+            return redirect('/logout/')
         #    context = {"error": "Something Wrong!"}
         else:
             login(request, user)
-            return redirect('/admin')
+            return redirect('/admin/')
     return render(request, "accounts/login.html", context)
 
 def logout_view(request):
