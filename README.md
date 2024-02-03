@@ -1,0 +1,1 @@
+The project "User_Authenticate.Django" is a Django web application developed as a practice project during the learning phase. It focuses on implementing user authentication functionalities using Django, a high-level Python web framework.
